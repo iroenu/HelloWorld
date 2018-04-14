@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.Text=findViewById(R.id.hello_world_text);
+        Text=findViewById(R.id.hello_world_text);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.action_text) {
-            this.Text.setText(R.string.author_date);
+            this.Text.setText(R.string.hello);
             return true;
         }
         return super.onOptionsItemSelected(item);
