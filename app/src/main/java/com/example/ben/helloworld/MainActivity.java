@@ -2,19 +2,27 @@ package com.example.ben.helloworld;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView Text;
+    private TextView text;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Text=findViewById(R.id.hello_world_text);
+        text=findViewById(R.id.hello_world_text);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener (v -> {
+            text.setText("Good Bye!");
+        });
+
     }
 
     @Override
@@ -25,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.action_text) {
-            this.Text.setText(R.string.hello);
-            return true;
-        }
         return super.onOptionsItemSelected(item);
     }
 

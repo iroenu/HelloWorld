@@ -10,9 +10,9 @@
         android:id="@+id/hello_world_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="@dimen/hello_margin"
         android:text="@string/hello_world"
-        android:textSize="36sp"
+        android:textSize="@dimen/text_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,11 +20,19 @@
         android:id="@+id/author_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="@dimen/author_margin"
         android:text="@string/author_date"
-        android:textSize="36sp"
+        android:textSize="@dimen/text_size"
         app:layout_constraintStart_toStartOf="@+id/hello_world_text"
         app:layout_constraintTop_toBottomOf="@+id/hello_world_text" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_text"
+        app:layout_constraintStart_toStartOf="@+id/author_date"
+        app:layout_constraintTop_toBottomOf="@+id/author_date"  />
 
 
 </android.support.constraint.ConstraintLayout>
